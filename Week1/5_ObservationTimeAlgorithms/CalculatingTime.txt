@@ -1,0 +1,11 @@
+How to calculate time for an algorithm :
+
+1) Get the running time of the algorithm, doubling the input for each iteration.
+2) Get the table of inputs and running times, according to the image.
+3) Make a log-log (base2) plot, and get the slope of the best fit line, doing a regression.
+4) For the image example, you'd get the points (3, -3.32), (4, -1.73), (5, 0.37), (6, 2.35), (7, 4.35).
+5) The slope for the best fit line would be 1.94 (somewhat close to 2).
+6) Using the formula T(n) = a*N^b, and filling x and y as 64000 and 20.5 :
+7) 20.5 = a*64000^1.94 -> a = 9.72*10^-9
+8) Final formula would be T(n) = 9.72*10^-9*n^1.94, approximately
+9) If you were to round b to 2, you'd get T(n) = 5^10-9*n^2
